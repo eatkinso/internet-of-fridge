@@ -1,0 +1,13 @@
+<!-- The user can select which item location they would like to view -->
+<!-- This page queries the database for items in that location -->
+
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}View Inventories{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h1>Inventory 1 </h1>
+  <li><a class="action" href="{{ url_for('iof.new_item') }}">New Inventory Item</a>
+{% endblock %}
