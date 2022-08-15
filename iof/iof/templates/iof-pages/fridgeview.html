@@ -1,0 +1,16 @@
+<!-- The user can select which item location they would like to view -->
+<!-- This page queries the database for items in that location -->
+
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Fridge View {% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('iof.add_item') }}">New Inventory Item</a>
+    <!--dumb note: remember that the link (url_for) name comes from the python function (so function inside iof.py)-->
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <h1>Dummy Content </h1>
+{% endblock %}
